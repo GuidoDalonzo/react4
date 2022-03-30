@@ -1,4 +1,4 @@
-import { useState, useEffect } from react
+import { useState, useEffect } from 'react'
 import { ItemDetail } from "../../components/ItemDetail/ItemDetail"
 import { getFetch } from '../../helpers/getFetch'
 
@@ -10,7 +10,7 @@ function ItemDetailContainer() {
         getFetch
         .then(resp => setProducto(resp(prod => prod.id === '1')))
         .catch(err => console.log(err))
-        .finally(() => setloading(false))
+
     }, [])
 
   return (
