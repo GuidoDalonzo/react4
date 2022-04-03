@@ -13,6 +13,12 @@ function App() {
     alert(`Agregaste ${qty} productos`);
   };
 
+  const [state, setState] = useState('');
+  const handleChange = (e) => {
+    console.warn(e.target.value);
+   
+    !/[aiueoAIUEO]/.test(e.target.value) && setState(e.target.value);
+
 
   return (
     <div className="App">
@@ -20,11 +26,26 @@ function App() {
 
       <ItemListContainer/>
       {<ItemDetailContainer></ItemDetailContainer>}
+
+      <input
+        
+        onChange={handleChange}
+        type="text"
+        placeholder="Ingresa una palabra"
+        
+        value={state}
+      />
+
+      <h2>Input Value: {state}</h2>
+
+      <hr />
+
     </div>
 
   );
 
-    
+  export default App;
+
 }
 
-export default App;
+
