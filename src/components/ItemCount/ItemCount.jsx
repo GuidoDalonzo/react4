@@ -17,7 +17,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         <button
           className="count-container__button"
           onClick={() => addProduct(-1)}
-          disabled={qty === initial ? true : null}
+          disabled={qty <= initial ? true : null}
         >
           -
         </button>

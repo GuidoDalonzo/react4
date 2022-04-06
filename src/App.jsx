@@ -38,14 +38,14 @@ function App() {
 
       <h2>Input Value: {state}</h2>
 
-      <hr />
+      <hr/>
 
     </div>
 
   );
+};  
 
-  export default App;
+export default App;
 
-}
 
 
