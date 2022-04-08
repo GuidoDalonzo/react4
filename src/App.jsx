@@ -1,3 +1,4 @@
+import React, { useEffect, useState, } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.svg';
 import './App.css';
@@ -13,11 +14,15 @@ function App() {
     alert(`Agregaste ${qty} productos`);
   };
 
-  const [state, setState] = useState('');
   const handleChange = (e) => {
+
     console.warn(e.target.value);
-   
+  
+    
+  
     !/[aiueoAIUEO]/.test(e.target.value) && setState(e.target.value);
+  
+   }
 
 
   return (

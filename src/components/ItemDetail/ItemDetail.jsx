@@ -1,7 +1,7 @@
 
 export function ItemDetail({ producto }) {
   return (
-    <div>{producto?.name}</div>
+    <div><ItemDetail producto={producto} /> </div>
   )
 }
 
