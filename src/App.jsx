@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/Item/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer';
-
+import {firestore} from "./firebase"
 
 function App() {
 
