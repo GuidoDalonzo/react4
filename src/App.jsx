@@ -10,6 +10,21 @@ import {firestore} from "./firebase"
 
 function App() {
 
+
+  const [ fireItems, setFireItems ] = useState([])
+  useEffect(() => {
+    const db = firestore
+    const collection = db.collection('products')
+    const query = collection.get()
+    query
+      .then((result) => {
+        setFireItems(result.docs.map(p => ({id: p.id, ...p.data()})))
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+}, [fireItems])
+
   const [state, setState] = useState 
 
   const onAdd = (qty) => {
