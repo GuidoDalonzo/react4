@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core';
 import React, { useContext, useState } from 'react'
 import '../Cart/Cart.css';
 import {CartContext} from '../../context/CartContext'
-import CartItem from '../Item/Item';
+import CartItem from '../Cart/CartItem';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
