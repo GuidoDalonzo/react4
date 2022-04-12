@@ -10,6 +10,8 @@ import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailConta
 
 function App() {
 
+  const [state, setState] = useState 
+
   const onAdd = (qty) => {
     alert(`Agregaste ${qty} productos`);
   };
